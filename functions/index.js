@@ -5,7 +5,10 @@ const admin = require("firebase-admin");
 const { onCall, HttpsError } = require("firebase-functions/v2/https");
 const { setGlobalOptions } = require("firebase-functions/v2");
 
-admin.initializeApp();
+admin.initializeApp({
+  databaseURL: "https://math-warrior-7d2a7-default-rtdb.asia-southeast1.firebasedatabase.app"
+});
+
 setGlobalOptions({ region: "asia-southeast1", maxInstances: 10 });
 
 const db = admin.database();
