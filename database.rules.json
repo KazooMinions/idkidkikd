@@ -1,0 +1,18 @@
+{
+  "rules": {
+    "rooms": {
+      ".read": true,
+      "$room": {
+        ".write": false,
+        "p1S": { ".write": true },
+        "p2S": { ".write": true },
+        "p1T": { ".write": true },
+        "p2T": { ".write": true }
+      }
+    },
+    "roomSecrets": {
+      ".read": false,
+      ".write": false
+    }
+  }
+}
